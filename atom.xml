@@ -13,9 +13,7 @@
         <id>https://justgo00.github.io/2024/01/13/HNP/</id>
         <title>HNP问题</title>
         <link rel="alternate" href="https://justgo00.github.io/2024/01/13/HNP/"/>
-        <content type="html">&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYW5xdWFua2UuY29tL3Bvc3QvaWQvMjA0ODQ2&#34;&gt;https://www.anquanke.com/post/id/204846&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNjI2MjMyL2FydGljbGUvZGV0YWlscy8xMjk5NjQwMzg=&#34;&gt;https://blog.csdn.net/qq_41626232/article/details/129964038&lt;/span&gt;&lt;/p&gt;
-&lt;h2 id=&#34;前言&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h2&gt;
+        <content type="html">&lt;h2 id=&#34;前言&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h2&gt;
 &lt;p&gt;格密码是一类备受关注的抗量子计算攻击的公钥密码体制。而格理论也使许多现代公钥密码 RSA、DSA 等体系受到影响。这篇文章主要从两道 CTF 题目来学习格密码中的 HNP (Hidden number problem）。&lt;/p&gt;
 &lt;h2 id=&#34;lattice&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lattice&#34;&gt;#&lt;/a&gt; Lattice&lt;/h2&gt;
 &lt;p&gt;首先谈谈个人对 Lattice 的理解叭。个人觉得，Latiice 就是由若干线性无关的向量组成的一个向量空间，在这个空间中，向量彼此之间可以进行相应的加、减运算。向量也可以乘以某个系数，但这个系数仅限于整数，因而形成了布满整个空间的格点。在格中的计算问题主要包括两种，即 SVP (the Shortest Vector Problem of lattice) 和 CVP (the Closest Vector  Problem)，然后个人认为，CVP 可以给 Latiice 加上一个维度后变成 SVP，继而可以用 LLL 算法来进行规约从而找到最短向量。&lt;/p&gt;
@@ -88,8 +86,7 @@
         <id>https://justgo00.github.io/2024/01/12/%E4%B8%89%E7%A7%8D%E6%A4%AD%E5%9C%86%E6%9B%B2%E7%BA%BF%E4%B9%8B%E9%97%B4%E7%9A%84%E8%BD%AC%E6%8D%A2/</id>
         <title>ECC常见格式变换</title>
         <link rel="alternate" href="https://justgo00.github.io/2024/01/12/%E4%B8%89%E7%A7%8D%E6%A4%AD%E5%9C%86%E6%9B%B2%E7%BA%BF%E4%B9%8B%E9%97%B4%E7%9A%84%E8%BD%AC%E6%8D%A2/"/>
-        <content type="html">&lt;p&gt;[Curve25519 曲线是什么？ - 知乎 (&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3poaWh1LmNvbQ==&#34;&gt;zhihu.com&lt;/span&gt;)](&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuemhpaHUuY29tL3F1ZXN0aW9uLzI5MDU0MTE4MyM6fjp0ZXh0PSVFNiU4OSVBRCVFNiU5QiVCMiVFNyU4OCVCMSVFNSVCRSVCNyVFNSU4RCU4RSVFNSVCRCVBMiVFNSVCQyU4RiVFNyU5QSU4NCVFNiVBNCVBRCVFNSU5QyU4NiVFNiU5QiVCMiVFNyVCQSVCRiVFNiU5NiVCOSVFNyVBOCU4QiVFNSVBRSU5QSVFNCVCOSU4OSVFNCVCOCVCQSVFRiVCQyU5QQ==&#34;&gt;https://www.zhihu.com/question/290541183#:~:text = 扭曲爱德华形式的椭圆曲线方程定义为：&lt;/span&gt; av&lt;sup&gt;2%2Bw&lt;/sup&gt;2 %3D 1 %2B dv&lt;sup&gt;2w&lt;/sup&gt;2, 其中 a%2Cd neq 0%2C a neq d。)&lt;/p&gt;
-&lt;h3 id=&#34;维尔斯特拉斯曲线&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#维尔斯特拉斯曲线&#34;&gt;#&lt;/a&gt; 维尔斯特拉斯曲线：&lt;/h3&gt;
+        <content type="html">&lt;h3 id=&#34;维尔斯特拉斯曲线&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#维尔斯特拉斯曲线&#34;&gt;#&lt;/a&gt; 维尔斯特拉斯曲线：&lt;/h3&gt;
 &lt;p&gt;椭圆曲线的一般形式可表示为：&lt;/p&gt;
 &lt;p&gt;E:y^2 = x^3 + A*x + B&lt;/p&gt;
 &lt;p&gt;A,B 属于 Fp,4&lt;em&gt;A^3 + 27&lt;/em&gt;B^2 != 0, 一般称上式为维尔斯特拉斯形式的&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuemhpaHUuY29tL3NlYXJjaD9xPSVFNiVBNCVBRCVFNSU5QyU4NiVFNiU5QiVCMiVFNyVCQSVCRiVFNiU5NiVCOSVFNyVBOCU4QiZhbXA7c2VhcmNoX3NvdXJjZT1FbnRpdHkmYW1wO2h5YnJpZF9zZWFyY2hfc291cmNlPUVudGl0eSZhbXA7aHlicmlkX3NlYXJjaF9leHRyYT0lN0IlMjJzb3VyY2VUeXBlJTIyJTNBJTIyYW5zd2VyJTIyJTJDJTIyc291cmNlSWQlMjIlM0EyNTE0Mjc5NzgzJTdE&#34;&gt;椭圆曲线方程&lt;/span&gt;.&lt;/p&gt;
