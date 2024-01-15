@@ -54,7 +54,6 @@
 &lt;p&gt;解决格密码的问题 LLL 算法的运用总是必不可少的，可是这里我们该如何利用 LLL 算法去找到向量 vk 呢？&lt;/p&gt;
 &lt;p&gt;如果我们的 vk 的长度在格中很小，我们利用 LLL 就很可能将其找出。所以，我们需要与服务端交互，然后收集当 ki 的 bit_length 比较小的情况时的相关数据。比如：我们知道 q 的 bit_length 为 128，那我们可以找 bit_legnth 为 122 的 ki，然后我们还需要一定的数据量，这样能提高利用 LLL 算法找到这个短向量的概率，并且，上述格中 K/q, K 的构造也是为了让 vk 中的每一项的长度都差不多，这样也有利于找到 vk，参考这一篇&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ob2xvY2lyY3VpdC5naXRodWIuaW8vMjAxOS8wMS8wOC91bm9mZmljaWFsLmh0bWw=&#34;&gt;文章&lt;/span&gt;中的&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://i.loli.net/2020/05/09/7NJvL2DSsXwHEnr.png&#34; alt=&#34;img&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;参考祥哥博客的这篇&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2Jsb2cuc29yZWF0dS5jb20vcG9zdHMvaW50ZW5kZWQtc29sdXRpb24tdG8tbmhwLWluLWd4enljdGYtMjAyMC8=&#34;&gt;出题文章&lt;/span&gt;，另外感谢祥哥的解惑。&lt;/p&gt;
 &lt;h2 id=&#34;npuctf2020-babylcg&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#npuctf2020-babylcg&#34;&gt;#&lt;/a&gt; NPUCTF2020-babyLCG&lt;/h2&gt;
 &lt;p&gt;题目附件可以在&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9idXVvai5jbi9jaGFsbGVuZ2VzIyU1Qk5QVUNURjIwMjAlNURiYWJ5TENH&#34;&gt; BUUOJ&lt;/span&gt; 下载&lt;/p&gt;
 &lt;h3 id=&#34;题目流程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#题目流程&#34;&gt;#&lt;/a&gt; 题目流程&lt;/h3&gt;
